@@ -19,23 +19,17 @@ Save the next code on a file called DOCKERFILE
 ## Header 2
 ### Header 3
 
-# Header 1
+# Set the image to use, in this case Ubuntu
 FROM ubuntu
-
+# Set the current directory to start
 workdir root/
-
+# Run at the beging these comands, getting all the software required
 RUN apt-get -y update && \
 	apt-get install -yq nano curl unzip less pip tldr &&\
 	lang=c.UTF-8 &&\
     pip install csvkit
-
+# copy the bash file whom will download and clean the data from the current folder
 copy scriptTest.sh /root
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
@@ -47,6 +41,34 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 ### Jekyll Themes
 
 You will also need an scrpit
+
+```Bash file
+# Check if a zip file exist (data) if not it will be downloaded
+if test -f *.zip; then
+	echo "Zip file exist Skipping download"
+else
+	echo "No information found, downloading information"
+	curl -L -O https://datosabiertos.salud.gob.mx/gobmx/salud/datos_abiertos/datos_abiertos_covid19.zip	
+fi
+
+if test -f *.csv; then
+	echo "There are csv files, Skipping unzip"
+else
+	echo "Unzip file"
+	for file in *.zip; do
+		echo "unziping file"
+		unzip $file
+	done
+fi
+
+for csvF in *.csv; do
+	echo "Selecting Sonora Data"
+	csvgrep -c MUNICIPIO_RES -r "30" csvF > datosHMO.csv
+	csvgrep -c UCI -r "SI" datosHMO.csv > datosHMO_PCI.csv
+done
+
+
+```
 
 ### Support or Contact
 
