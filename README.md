@@ -1,2 +1,2 @@
-# MCD_Act2
-A repository with docker script will allows you to see the data of covid in Sonora/Mexico
+# MCD - Activty 2 
+A repository for the use of docker and a script will allows you to see the data of covid in Sonora/Mexico.
