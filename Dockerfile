@@ -9,3 +9,5 @@ RUN apt-get -y update && \
 
 copy script.sh /root
 
+ENTRYPOINT ["/script.sh"]
+
