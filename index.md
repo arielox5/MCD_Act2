@@ -1,16 +1,13 @@
 ## Welcome to MCD Unison - Covid-19 Hermosillo Data
 
-You can use the [editor on GitHub](https://github.com/arielox5/MCD_Act2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
 This is a page created for the purpose of learning in the course of "Productivity tool", where we use Docker, GitHub, bash, cvskit as tools for learn and make this project.
-Here will show you how I get to obtain the data, step by step, you are allowed to use it using the dockerfile.
+Here will show you how I get to obtain the data, step by step, you are allowed to use it using the [dockerfile](https://github.com/arielox5/MCD_Act2/blob/main/Dockerfile).
 
 
 This result shows how many cases are on Hermosillo.
 
 ### Creating docker file
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```Docker File
 Save the next code on a file called DOCKERFILE
@@ -32,9 +29,7 @@ copy scriptTest.sh /root
 [Link](url) and ![Image](src)
 ```
 
-### Jekyll Themes
-
-You will also need an scrpit (bash)
+### Bash file to clean data
 
 ```
 # Check if a zip file exist (data) if not it will be downloaded
