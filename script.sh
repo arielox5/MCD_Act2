@@ -18,5 +18,5 @@ fi
 for csvF in *.csv; do
 	echo "Selecting Sonora Data"
 	csvgrep -c MUNICIPIO_RES -r "30" $csvF > datosHMO.csv
-	csvgrep -c UCI -r "SI" datosHMO.csv > datosHMO_PCI.csv
+	csvgrep -c UCI -r "1" datosHMO.csv > datosHMO_PCI.csv
 done
