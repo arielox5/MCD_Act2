@@ -6,7 +6,7 @@ This is a page created for the purpose of learning in the course of "Productivit
 Here will show you how I get to obtain the data, step by step, you are allowed to use it using the dockerfile.
 
 
-This result shows how many case are on Hermosillo.
+This result shows how many cases are on Hermosillo.
 
 ### Creating docker file
 
@@ -14,10 +14,6 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```Docker File
 Save the next code on a file called DOCKERFILE
-
-# Header 1
-## Header 2
-### Header 3
 
 # Set the image to use, in this case Ubuntu
 FROM ubuntu
@@ -36,13 +32,11 @@ copy scriptTest.sh /root
 [Link](url) and ![Image](src)
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
 ### Jekyll Themes
 
-You will also need an scrpit
+You will also need an scrpit (bash)
 
-```Bash file
+```
 # Check if a zip file exist (data) if not it will be downloaded
 if test -f *.zip; then
 	echo "Zip file exist Skipping download"
@@ -72,4 +66,4 @@ done
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Once you have both files (on the same folder), you can run the docker file.
